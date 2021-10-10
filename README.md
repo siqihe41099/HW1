@@ -6,7 +6,7 @@
 * imgFilename: the name of the image file
 * savedImgPath: the path of the folder you will save the image
 * savedImgFilename: the name of the output image
-* k: the number of clusters of the k-means function
+* k: the number of clusters of the k-means function \
 The variables except input parameters appeared in the code are explained in the script
 ##### Output:
 * One plot of the comparsion between original image and segmented image (not be saved,just for display)
