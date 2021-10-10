@@ -7,6 +7,7 @@
 * savedImgPath: the path of the folder you will save the image
 * savedImgFilename: the name of the output image
 * k: the number of clusters of the k-means function \
+\
 The variables except input parameters appeared in the code are explained in the script
 ##### Output:
 * One plot of the comparsion between original image and segmented image (not be saved,just for display)
@@ -32,4 +33,9 @@ I write this part in the script in detail. So Here I introduce it briefly.
   to look for best k rather than manually doing it.
 * It cannot recognize multiple faces in one image.
 
-
+### References
+* kmeans: https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html and 
+  https://www.kdnuggets.com/2019/08/introduction-image-segmentation-k-means-clustering.html
+* Skin Color Value: https://colorswall.com/palette/2513
+* cv2.findContours: https://opencv24-python-tutorials.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_contours/py_contours_begin/py_contours_begin.html
+* cv2.boundingRect: https://www.pythonpool.com/cv2-boundingrect/
