@@ -12,7 +12,7 @@ The variables except input parameters appeared in the code are explained in the 
 ##### Output:
 * One plot of the comparsion between original image and segmented image (not be saved,just for display)
 * One plot of the original image with a bounding box on the face (not be saved,just for display)
-* One plot of the original image with a bounding box on the face (saved directly to the specified path
+* One plot of the original image with a bounding box on the face (saved directly to the specified path)
 
 ### The logic behind the Flow:
 I write this part in the script in detail. So Here I introduce it briefly. 
