@@ -32,9 +32,9 @@ I write this part in the script in detail. So Here I introduce it briefly.
 5. Save image to specified directory
 
 ### Limitations:
-* It cannot recognize people for different color skin, since I manually set the skin color for pale skin. And this choice change the result of bounding box. For example, I used [236, 188, 180] as skin color before, then only k=4,5,6 works. When k=7 to 10 it mistakenly bound the shirt. Then I change to [209, 163, 164], k = 4 to 10 works, even though k = 8 to 10 cannot bound the whole face region, but only half of the face. So the skin color matters.
-* It need the correct k input. And in my program, we can only try different k manully. It is better to find a way to look for best k rather than manually doing it.
-* It cannot recognize multiple faces in one image.
+* It cannot recognize people for different color skin, since I manually set the skin color for pale skin. And this choice change the result of bounding box. For example, I used [236, 188, 180] as skin color before, then only k=4,5,6 works. When k=7 to 10 it mistakenly bound the shirt. Then I change to [209, 163, 164], k = 4 to 10 works, even though k = 8 to 10 cannot bound the whole face region, but only half of the face. So the skin color matters. Maybe I should set a skin color range instead of a single skin color value. 
+* It need the correct k input. And in my program, we can only try different k manully. It is better to find a way to look for best k rather than manually doing it. My thought is to use a for loop on k and choose the best one.
+* It cannot recognize multiple faces in one image. I haven't got a good way to solve this limitation yet.
 
 ### References
 * kmeans: https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html and 
