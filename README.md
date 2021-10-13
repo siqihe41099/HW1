@@ -1,7 +1,7 @@
 # HW1
 ### UNI_Name_kmeans(imgPath,imgFilename,savedImgPath,savedImgFilename,k)
 #### Specify and Explain ALLkey variables/parameters used in the code. 
-##### Input Parameters:
+##### Input Parameters: (From pseudocode)
 * imgPath: the path of the image folder. Please use relative path
 * imgFilename: the name of the image file
 * savedImgPath: the path of the folder you will save the image
@@ -11,6 +11,7 @@
 The variables except input parameters appeared in the code are explained in the script
 ##### Output:
 * One plot of the comparsion between original image and segmented image (not be saved,just for display)
+* One plot of the binary image after segmentation and choosing the appropriate cluster (not be saved,just for display)
 * One plot of the original image with a bounding box on the face (not be saved,just for display)
 * One plot of the original image with a bounding box on the face (saved directly to the specified path)
 
@@ -19,10 +20,16 @@ I write this part in the script in detail. So Here I introduce it briefly.
 1. Import image and turn it into RGB
 2. Apply kmeans to segment image and plot the segmented image
 3. Find face cluster
-   * compare each center of cluster to RGB of skin color and the index of min value is the right center
+   * Compare each center of cluster to RGB of skin color and the index of min value is the right center
    * Convert the image into a binary image (face and background)
+   * plot the binary image
 4. Find contour and display image with a bounding box
-5. Save image to specified directory
+   * Use cv2.findContours() to find contour
+   * Calculate the area of contours bounded and the maximum one represents the face region
+   * Use cv2.boundingRect() to find the x,y coordinate of starting point, width and height of the bounding box
+   * Use cv2.rectangle() to draw the bounding box on the original image
+   * plot the required image
+6. Save image to specified directory
 
 ### Limitations:
 * It cannot recognize people for different color skin, since I manually set the skin color for pale skin. And 
