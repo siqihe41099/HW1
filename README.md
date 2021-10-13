@@ -29,15 +29,11 @@ I write this part in the script in detail. So Here I introduce it briefly.
    * Use cv2.boundingRect() to find the x,y coordinate of starting point, width and height of the bounding box
    * Use cv2.rectangle() to draw the bounding box on the original image
    * plot the required image
-6. Save image to specified directory
+5. Save image to specified directory
 
 ### Limitations:
-* It cannot recognize people for different color skin, since I manually set the skin color for pale skin. And 
-  this choice change the result of bounding box. For example, I used [236, 188, 180] as skin color before, then
-  only k=4,5,6 works. When k=7 to 10 it mistakenly bound the shirt. Then I change to [209, 163, 164], k = 4 to 10 
-  works, even though k = 8 to 10 cannot bound the whole face region, but only half of the face. So the skin color matters.
-* It need the correct k input. And in my program, we can only try different k manully. It is better to find a way 
-  to look for best k rather than manually doing it.
+* It cannot recognize people for different color skin, since I manually set the skin color for pale skin. And this choice change the result of bounding box. For example, I used [236, 188, 180] as skin color before, then only k=4,5,6 works. When k=7 to 10 it mistakenly bound the shirt. Then I change to [209, 163, 164], k = 4 to 10 works, even though k = 8 to 10 cannot bound the whole face region, but only half of the face. So the skin color matters.
+* It need the correct k input. And in my program, we can only try different k manully. It is better to find a way to look for best k rather than manually doing it.
 * It cannot recognize multiple faces in one image.
 
 ### References
